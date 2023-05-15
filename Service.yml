@@ -6,7 +6,7 @@ metadata:
     app: aksproject
 spec:
   ports:
-    - port: 8080                               
+    - port: 8090                               
       targetPort: 80                    
       nodePort: 31200
   selector:
