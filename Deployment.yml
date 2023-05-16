@@ -4,20 +4,20 @@ metadata:
    name: aksproject
 spec:
    replicas: 2
-   selector:      # tells the controller which pods to take under control
-    matchLabels:
-     app: aksproject
+   selector:     
+      matchLabels:
+         app: aksproject
    template:
       metadata:
-        labels:
-          app: aksproject
+          labels:
+             app: aksproject
       spec:
-       containers:
-        - name: aksproject
-          image: devops7k/project_pipeline
-          imagePullPolicy: Always
-          ports:
-          - containerPort: 80
+          containers:
+             - name: aksproject
+               image: devops7k/project_pipeline
+               imagePullPolicy: Always
+               ports:
+                 - containerPort: 80
           
           
           
