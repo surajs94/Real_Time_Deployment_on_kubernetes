@@ -1,16 +1,16 @@
 kind: Service                             
 apiVersion: v1
 metadata:
-  name: aksproject
+  name: aksproject1
   labels:
-    app: aksproject
+    app: aksproject1
 spec:
   ports:
     - port: 8080                               
       targetPort: 80                    
       nodePort: 31200
   selector:
-    app: aksproject                    
+    app: aksproject1                    
   type: LoadBalancer    
   
 #   -------------------------------
