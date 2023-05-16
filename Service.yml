@@ -21,14 +21,14 @@ metadata:
   labels:
     app: aksproject
 spec:
-   type: NodePort
+   type: LoadBalancer
    selector:
       app: aksproject                    
    ports:
-    - port: 80                               
+    - port: 8080                               
       targetPort: 80                    
-      nodePort: 31000
-      protocol: TCP
+      nodePort: 31200
+      
  
 #   ---------------------
 
