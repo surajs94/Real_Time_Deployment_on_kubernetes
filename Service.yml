@@ -1,31 +1,31 @@
-# kind: Service                             
-# apiVersion: v1
-# metadata:
-#   name: aksproject
-#   labels:
-#     app: aksproject
-# spec:
-#   ports:
-#     - port: 8080                               
-#       targetPort: 80                    
-#       nodePort: 30000
-#   selector:
-#     app: aksproject                    
-#   type: LoadBalancer    
-  
-#   -------------------------------
-kind: Service
+kind: Service                             
 apiVersion: v1
 metadata:
-  name: cloudknowledges
+  name: aksproject
   labels:
-     app: cloudknowledges
+    app: aksproject
 spec:
-   selector: 
-     app: cloudknowledges
-   type: LoadBalancer
-   ports:
-     - port: 8080
-       targetPort: 80
-       nodePort: 31200
+  ports:
+    - port: 8080                               
+      targetPort: 80                    
+      nodePort: 31200
+  selector:
+    app: aksproject                    
+  type: LoadBalancer    
+  
+#   -------------------------------
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name: cloudknowledges
+#   labels:
+#      app: cloudknowledges
+# spec:
+#    selector: 
+#      app: cloudknowledges
+#    type: LoadBalancer
+#    ports:
+#      - port: 8080
+#        targetPort: 80
+#        nodePort: 31200
 
