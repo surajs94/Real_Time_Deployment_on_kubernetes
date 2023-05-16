@@ -12,7 +12,7 @@ spec:
       protocol: TCP
   selector:
     app: aksproject                    
-  type: LoadBalancer    
+  type: NodePort    
 #   ---------------------
 
 
