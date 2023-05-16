@@ -6,9 +6,10 @@ metadata:
     app: aksproject
 spec:
   ports:
-    - port: 8080                               
+    - port: 80                               
       targetPort: 80                    
-      nodePort: 31200
+      nodePort: 30007
+      protocol: TCP
   selector:
     app: aksproject                    
   type: LoadBalancer    
