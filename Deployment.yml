@@ -1,51 +1,51 @@
-# kind: Deployment
-# apiVersion: apps/v1
-# metadata:
-#    name: aksproject
-# spec:
-#    replicas: 2
-#    selector:      # tells the controller which pods to take under control
-#     matchLabels:
-#      app: aksproject
-#    template:
-#       metadata:
-#         labels:
-#           app: aksproject
-#       spec:
-#        containers:
-#         - name: aksproject
-#           image: devops7k/project_pipeline
-#           imagePullPolicy: Always
-#           ports:
-#           - containerPort: 80
-          
-          
-          
-#      --------------------------
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: cloudknowledges
-spec: 
-   selector:
-       matchLabels:
-            app: cloudknowledges       
+   name: aksproject
+spec:
    replicas: 2
-   strategy:
-       type: RollingUpdate
-       rollingUpdate: 
-          maxSurge: 1
-          maxUnavailable: 1
+   selector:      # tells the controller which pods to take under control
+    matchLabels:
+     app: aksproject
    template:
-       metadata: 
-          labels:
-            app: cloudknowledges
-       spec: 
-          containes:
-             - name: cloudknowledges
-               image: devops7k/project_pipeline
-               imagePullPolicy: Always
-               ports: 
-                  - containerPort: 80
+      metadata:
+        labels:
+          app: aksproject
+      spec:
+       containers:
+        - name: aksproject
+          image: devops7k/project_pipeline
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          
+          
+          
+# #      --------------------------
+# kind: Deployment
+# apiVersion: apps/v1
+# metadata:
+#    name: cloudknowledges
+# spec: 
+#    selector:
+#        matchLabels:
+#             app: cloudknowledges       
+#    replicas: 2
+#    strategy:
+#        type: RollingUpdate
+#        rollingUpdate: 
+#           maxSurge: 1
+#           maxUnavailable: 1
+#    template:
+#        metadata: 
+#           labels:
+#             app: cloudknowledges
+#        spec: 
+#           containes:
+#              - name: cloudknowledges
+#                image: devops7k/project_pipeline
+#                imagePullPolicy: Always
+#                ports: 
+#                   - containerPort: 80
           
    
