@@ -22,25 +22,24 @@
           
           
 #      --------------------------
-apiVersion: apps/v1
 kind: Deployment
+apiVersion: apps/v1
 metadata:
    name: cloudknowledges
 spec: 
    selector:
        matchLabels:
-            app: cloudknowledges
-            
+            app: cloudknowledges       
    replicas: 2
    strategy:
-      type: RollingUpdate
-      rollingUpdate: 
+       type: RollingUpdate
+       rollingUpdate: 
           maxSurge: 1
           maxUnavailable: 1
    template:
        metadata: 
           labels:
-              app: cloudknowledges
+            app: cloudknowledges
        spec: 
           containes:
              - name: cloudknowledges
