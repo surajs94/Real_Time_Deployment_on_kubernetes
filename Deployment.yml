@@ -17,7 +17,7 @@ spec:
           image: devops7k/project_pipeline
           imagePullPolicy: Always
           ports:
-          - containerPort: 90
+          - containerPort: 80
           
           
           
