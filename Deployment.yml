@@ -23,7 +23,7 @@
           
 #      --------------------------
 apiVersion: apps/v1
-kind: DEployment
+kind: Deployment
 metadata:
    name: cloudknowledges
 spec: 
