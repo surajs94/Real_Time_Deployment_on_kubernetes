@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: aksproject
+   name: aksproject1
 spec:
    replicas: 2
    selector:      # tells the controller which pods to take under control
     matchLabels:
-     app: aksproject
+     app: aksproject1
    template:
       metadata:
         labels:
-          app: aksproject
+          app: aksproject1
       spec:
        containers:
-        - name: aksproject
+        - name: aksproject1
           image: devops7k/project_pipeline
           imagePullPolicy: Always
           ports:
