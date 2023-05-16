@@ -15,7 +15,7 @@ spec:
        containers:
         - name: aksproject
           image: devops7k/project_pipeline
-#           imagePullPolicy: Always
+          imagePullPolicy: Always
           ports:
           - containerPort: 80
           
