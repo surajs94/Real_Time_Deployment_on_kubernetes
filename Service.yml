@@ -25,7 +25,7 @@ spec:
    selector:
       app: aksproject                    
    ports:
-    - port: 8080                               
+    - port: 80                               
       targetPort: 80                    
       nodePort: 31200
       
