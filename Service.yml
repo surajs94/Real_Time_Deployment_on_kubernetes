@@ -1,22 +1,6 @@
 
 # ------------------------------------------------------
 
-kind: Service                             
-apiVersion: v1
-metadata:
-  name: aksproject
-  labels:
-    app: aksproject
-spec:
-  ports:
-    - port: 8080                               
-      targetPort: 80                    
-      nodePort: 30001
-      protocol: TCP
-  selector:
-    app: aksproject                    
-  type: NodePort    
-# -----------------
 # kind: Service                             
 # apiVersion: v1
 # metadata:
@@ -24,13 +8,29 @@ spec:
 #   labels:
 #     app: aksproject
 # spec:
-#    type: NodePort
-#    selector:
-#       app: aksproject                    
-#    ports:
-#     - port: 8080
+#   ports:
+#     - port: 8080                               
 #       targetPort: 80                    
-#       nodePort: 31200
+#       nodePort: 30001
+#       protocol: TCP
+#   selector:
+#     app: aksproject                    
+#   type: NodePort    
+# -----------------
+kind: Service                             
+apiVersion: v1
+metadata:
+  name: aksproject
+  labels:
+    app: aksproject
+spec:
+   type: NodePort
+   selector:
+      app: aksproject                    
+   ports:
+    - port: 8080
+      targetPort: 80                    
+      nodePort: 31200
       
  
 #   ---------------------
