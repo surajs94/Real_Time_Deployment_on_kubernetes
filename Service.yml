@@ -24,7 +24,7 @@ metadata:
   labels:
     app: aksproject
 spec:
-   type: NodePort
+   type: LoadBalancer
    selector:
       app: aksproject                    
    ports:
